@@ -1,0 +1,17 @@
+#Import Statement
+import turtle
+
+my_turtle = turtle.Turtle()
+
+#set speed
+my_turtle.speed(2)
+
+distance = 100
+
+def hex():
+    for i in range(0,6):
+        my_turtle.fd(distance)
+        my_turtle.lt(60)
+    return()
+
+#try alternating left and right turns at end of function
