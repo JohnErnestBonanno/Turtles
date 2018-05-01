@@ -1,0 +1,33 @@
+#Instructions on opening python scripts from python interpreter
+
+#Exec open read
+
+#exec(open("filename.py").read())
+
+#Exec(): This function supports dynamic execution of Python code
+#executes the code
+
+#Open(): opens file and returns a corresponding file object
+
+#read(): reads the file
+
+
+
+#Call from terminal
+#python -i filename.py
+
+#-i leaves the interpreter open
+
+
+#import package
+
+#import filename.py
+#don't need to call the py
+
+#then works like a normal package your import
+
+#filename.var
+#filename.function()
+
+#could even do:
+#import filename.py as file
