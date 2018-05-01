@@ -1,1 +1,21 @@
 print("Hello World")
+
+
+print(1+1)
+
+import turtle
+
+my_turtle = turtle.Turtle()
+
+#set speed
+my_turtle.speed(2)
+
+distance = 100
+#move turtle in a square
+#def square(distance):
+def square(distance):
+    for x in range(0,4):
+        my_turtle.fd(distance)
+        my_turtle.rt(90)
+
+square(50)

@@ -18,6 +18,13 @@ def lhex():
     my_turtle.lt(60)
     return()
 
+def slideup():
+    my_turtle.lt(120)
+    my_turtle.fd(distance)
+    my_turtle.rt(60)
+    my_turtle.fd(distance)
+    my_turtle.rt(60)
+
 def rhex():
     for i in range(0,5):
         my_turtle.fd(distance)
@@ -31,6 +38,12 @@ def slidedown():
         my_turtle.fd(distance)
         my_turtle.rt(60)
     my_turtle.rt(120)
+
+def shiftl2r():
+    my_turtle.fd(distance)
+    my_turtle.lt(60)
+    my_turtle.fd(distance)
+    my_turtle.rt(60)
 
  #using slide down, can a line of hexagons going down
 
