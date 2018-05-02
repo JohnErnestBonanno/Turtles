@@ -8,9 +8,11 @@ my_turtle = turtle.Turtle()
 #clear screen, move turtle back to initial position
 #my_turtle.reset()
 
-distance = 25
+#distance = 25
+#vertdist = 2
+#hordist = 2
 
-def lhex():
+def lhex(distance):
     for i in range(0,5):
         my_turtle.fd(distance)
         my_turtle.lt(60)
@@ -18,7 +20,7 @@ def lhex():
     my_turtle.lt(60)
     return()
 
-def slideup():
+def slideup(distance):
     my_turtle.pu()
     my_turtle.lt(120)
     my_turtle.fd(distance)
@@ -28,7 +30,7 @@ def slideup():
     my_turtle.pd()
 
 
-def rhex():
+def rhex(distance):
     for i in range(0,5):
         my_turtle.fd(distance)
         my_turtle.rt(60)
@@ -36,7 +38,7 @@ def rhex():
     my_turtle.rt(60)
     return()
 
-def slidedown():
+def slidedown(distance):
     my_turtle.pu()
     for i in range(0,4):
         my_turtle.fd(distance)
@@ -44,7 +46,7 @@ def slidedown():
     my_turtle.rt(120)
     my_turtle.pd()
 
-def shiftl2r():
+def shiftl2r(distance):
     my_turtle.pu()
     my_turtle.fd(distance)
     my_turtle.lt(60)
@@ -53,27 +55,29 @@ def shiftl2r():
     my_turtle.pd()
 
 def hexdown():
-    for i in range(0,5):
+    for i in range(0,vertdist):
         rhex()
         slidedown()
 
 def hexup():
-    for i in range(0,5):
+    for i in range(0,vertdist+1):
         lhex()
         slideup()
 
-def main():
+def main(distance, vertdist, hordist):
     speed = 5
     my_turtle.speed(speed)
-    for i in range(0,5):
-        hexdown()
-        shiftl2r()
-        hexup()
-        shiftl2r()
-        speed += 5
+    hexdown()
+    shiftl2r(distance)
+    hexup()
+    shiftl2r(distance)
+    #speed += 5
 #need to add main funtion that inputs for either hexup() or hexdown() to go
 #one more
 
+#make simple case function saying this is your number, and then another main function calling it.  Need
+#to figure out what can get refewrenced where.  Or need to simplfy the above to make sure I get hexdown/hexup
+#working how I want it to 
 
 
  #using slide down, can a line of hexagons going down
